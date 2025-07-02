@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVNT+ | Event Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-black sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white tracking-wide">EVNT+</div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-white">
+        <a href="#" class="hover:text-cyan-400">Home</a>
+        <a href="#events" class="hover:text-cyan-400">Events</a>
+        <a href="#about" class="hover:text-cyan-400">About Us</a>
+        <a href="#book" class="hover:text-cyan-400">Book Now</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-2xl focus:outline-none">
+          ☰
+        </button>
+      </div>
+
+      <!-- Login/Signup -->
+      <div class="hidden md:flex space-x-3">
+        <button class="text-sm text-cyan-400 hover:underline">Login</button>
+        <button class="bg-cyan-400 text-black px-4 py-2 rounded text-sm hover:bg-cyan-300">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 text-white">
+      <a href="#" class="block py-2">Home</a>
+      <a href="#events" class="block py-2">Events</a>
+      <a href="#about" class="block py-2">About Us</a>
+      <a href="#book" class="block py-2">Book Now</a>
+      <div class="mt-2 space-x-2">
+        <button class="text-sm text-cyan-400 underline">Login</button>
+        <button class="bg-cyan-400 text-black px-3 py-1 rounded text-sm">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Background Video -->
+  <section class="relative h-[450px] overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-0">
+      <source src="media/The-MostHappeningCampus.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end pb-12 px-4 text-center z-10">
+      <p class="text-cyan-400 text-sm tracking-wide">EVNT+ Management</p>
+      <h1 class="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl mt-2">BRINGING<br>UNIVERSITY EVENTS<br>TO LIFE</h1>
+      <div class="mt-6">
+        <a href="#events" class="border border-cyan-400 text-cyan-400 px-6 py-2 rounded-full hover:bg-cyan-400 hover:text-black transition">
+          View Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-16 px-4 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-10">Bringing Your Events to Life</h2>
+    <div class="w-full max-w-4xl mx-auto rounded-[40px] bg-gray-800 p-6 sm:p-10 flex justify-center items-center">
+      <img src="https://via.placeholder.com/100x100.png?text=Image" alt="Event Highlight" class="rounded-lg w-24 h-24 sm:w-32 sm:h-32">
+    </div>
+    <div class="mt-8">
+      <a href="#events" class="bg-cyan-400 text-black px-6 py-3 rounded-full hover:bg-cyan-300 transition">View Events</a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 px-4" id="about">
+    <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-center">Why Choose Us</h3>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 border border-cyan-400 p-6 rounded shadow bg-gray-900">
+        <div class="w-16 h-16 bg-cyan-400 rounded-full mb-4 sm:mb-0"></div>
+        <div class="text-center sm:text-left">
+          <h4 class="font-semibold text-lg mb-1">Expert Planning</h4>
+          <p class="text-gray-300 text-sm">Years of experience in executing seamless events.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border border-cyan-400 p-6 rounded shadow text-center bg-gray-900">
+        <div class="w-full h-32 bg-cyan-400 mb-4 rounded"></div>
+        <p class="text-sm text-gray-300">Trusted by leading brands and clients nationwide.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-cyan-400 text-black py-4 mt-12">
+    <div class="flex justify-center space-x-6 text-sm">
+      <a href="#about" class="hover:underline">About us</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Toggle Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
